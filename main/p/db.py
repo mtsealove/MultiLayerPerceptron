@@ -2,7 +2,7 @@ import pymysql
 from main.p.pattern import pattern
 import numpy as np
 
-pw = 'Fucker0916!'
+pw = 'xxxxxxxx'
 
 
 # db 에서 입력 패턴
@@ -36,7 +36,6 @@ def save_weight(t, weight):
     teach = ''
     for w in t:
         teach = teach + str(w)
-    print(teach)
     weight_str = ''
     for x in range(len(weight)):
         line = weight[x]

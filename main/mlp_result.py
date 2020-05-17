@@ -12,13 +12,17 @@ weights = db.get_weights()
 max_sum = np.dot(weights[0], inputs).sum()
 max_idx = 0
 
+print('input:')
+print(inputs)
 for i in range(len(weights)):
     weight = weights[i]
     # 값을 곱해서 최대값을 구함
     weight_sum = (weight * inputs).sum()
+    print('weights_sum: '+str(weight_sum))
     # 최대 값 구하기
     if weight_sum > max_sum:
         max_sum = weight_sum
         max_idx = i
 # 최종 결과값 출력
+print('output:')
 print(inout[max_idx].outputs)

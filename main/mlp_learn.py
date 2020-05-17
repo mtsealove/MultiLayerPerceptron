@@ -90,7 +90,7 @@ for epoch in range(100000):
     if epoch % 1000 == 0:
         print('epoch: ' + str(epoch))
 
-    # 이전 변화량과 비료
+    # 이전 변화량과 비굔
     if abs(switch - abs(prev_diff - total)) < 0.000001:
         print('epoch: ' + str(epoch))
         break
@@ -99,8 +99,8 @@ for epoch in range(100000):
 
 db.remove_weight()
 for i in range(len(input_hidden_weights)):
+    print(np.dot(hidden_output_weights[i], input_hidden_weights[i]))
     # 학습된 가중치 저장
     db.save_weight(inout[i].outputs, np.dot(hidden_output_weights[i], input_hidden_weights[i]))
     print('-------------------------')
-
 
